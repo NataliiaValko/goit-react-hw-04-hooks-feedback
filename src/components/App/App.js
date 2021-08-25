@@ -19,13 +19,17 @@ const App = () => {
   const onLeaveFeedback = (value) => {
     switch (value) {
       case types.GOOD:
-        return setGood((prev) => prev + 1);
+        setGood((prev) => prev + 1);
+        break;
       case types.NEUTRAL:
-        return setNeutral((prev) => prev + 1);
+        setNeutral((prev) => prev + 1);
+        break;
       case types.BAD:
-        return setBad((prev) => prev + 1);
+        setBad((prev) => prev + 1);
+        break;
+
       default:
-        return;
+        throw new Error();
     }
   };
 
